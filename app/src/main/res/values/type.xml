@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Customized typography for selected components-->
+
+    <!--Title (Image Item - Name, ImageDetailFragment - Header)-->
+    <style name="PixabayPayback.Title" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">15sp</item>
+
+    </style>
+
+    <!-- Sub Title (Image Item - User Name, ImageDetailFragment - Details ) -->
+    <style name="PixabayPayback.SubTitle" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="fontFamily">@font/poppins</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/assistiveColor</item>
+        <item name="android:textSize">14sp</item>
+
+    </style>
+
+    <!-- Toolbar Titles -->
+    <style name="PixabayPayback.ToolbarText" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+    </style>
+
+    <!--Headline 5 (Image - Tags)-->
+    <style name="PixabayPaybackHeadline5" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <!--Headline 4 (Image - downloads count, likes count and comments count)-->
+    <style name="PixabayPaybackCoungText" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/assistiveColor</item>
+    </style>
+
+</resources>
