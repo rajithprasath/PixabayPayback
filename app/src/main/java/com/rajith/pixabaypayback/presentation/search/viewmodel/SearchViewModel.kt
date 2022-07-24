@@ -19,12 +19,6 @@ class SearchViewModel @Inject constructor(
     private val defaultSearch = DEFAULT_SEARCH
     var currentSearch = defaultSearch
 
-    init {
-        viewModelScope.launch {
-            searchImages(currentSearch)
-        }
-    }
-
     suspend fun searchImages(searchString: String): Flow<PagingData<Image>> {
         currentSearch = searchString
         return searchUseCase.invoke(searchString)

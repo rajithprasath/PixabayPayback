@@ -43,6 +43,8 @@ fun Fragment.setToolbar(toolbar: Toolbar) {
     (requireActivity() as AppCompatActivity).setSupportActionBar(toolbar)
     (requireActivity() as AppCompatActivity).supportActionBar?.setDisplayHomeAsUpEnabled(true)
     (requireActivity() as AppCompatActivity).supportActionBar?.setHomeButtonEnabled(true)
+    (requireActivity() as AppCompatActivity).supportActionBar?.setDisplayShowTitleEnabled(false)
+    (requireActivity() as AppCompatActivity).supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_arrow_back);
 }
 
 fun Activity.changeStatusBar(shouldBeLight: Boolean) {

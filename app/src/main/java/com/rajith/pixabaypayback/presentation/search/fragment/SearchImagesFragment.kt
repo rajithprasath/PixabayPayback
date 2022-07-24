@@ -6,6 +6,7 @@ import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
 import androidx.core.view.isVisible
@@ -48,7 +49,10 @@ class SearchImagesFragment : Fragment(R.layout.fragment_search_images) {
         if (!isInitiated) init()
 
         binding.btnRetry.setOnClickListener {
-            adapter.refresh()
+            val query = binding.etSearch.text.toString().trim()
+            if (query.isNotEmpty()) {
+                searchImages(query, true)
+            }
         }
 
     }
@@ -83,10 +87,9 @@ class SearchImagesFragment : Fragment(R.layout.fragment_search_images) {
 
         adapter.addLoadStateListener { state ->
             binding.progress.isVisible = state.refresh is LoadState.Loading
-
             binding.emptySection.isVisible =
                 state.refresh is LoadState.NotLoading && adapter.itemCount == 0
-            binding.errorSection.isVisible = state.refresh is LoadState.Error
+            binding.errorSection.isVisible = state.refresh is LoadState.Error && adapter.itemCount == 0
 
         }
     }
@@ -130,11 +133,23 @@ class SearchImagesFragment : Fragment(R.layout.fragment_search_images) {
     }
 
     private fun navigate(image: Image, imageView: ImageView) {
-        val extras = FragmentNavigatorExtras(
-            imageView to image.largeImageUrl
-        )
-        val action = SearchImagesFragmentDirections.toImageDetailFragment(image)
-        findNavController().navigate(action, extras)
+        val alertDialog: AlertDialog.Builder = AlertDialog.Builder(requireContext())
+        alertDialog.setMessage(getString(R.string.text_see_details))
+        alertDialog.setPositiveButton(getString(R.string.text_yes)) { dialog, _ ->
+            dialog.dismiss()
+            val extras = FragmentNavigatorExtras(
+                imageView to image.largeImageUrl
+            )
+            val action = SearchImagesFragmentDirections.toImageDetailFragment(image)
+            findNavController().navigate(action, extras)
+        }
+        alertDialog.setNegativeButton(getString(R.string.text_cancel)) { dialog, _ ->
+            dialog.dismiss()
+        }
+        val alert = alertDialog.create()
+        alert.setCanceledOnTouchOutside(false)
+        alert.show()
+
     }
 
     private fun retry() {

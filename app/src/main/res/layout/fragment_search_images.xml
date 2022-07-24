@@ -57,11 +57,13 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvImages"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:paddingStart="@dimen/size_4"
             android:paddingTop="@dimen/size_4"
             android:paddingEnd="@dimen/size_4"
-            android:paddingBottom="?actionBarSize"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/searchContainer"
             tools:listitem="@layout/image_item" />
 

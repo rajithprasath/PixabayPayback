@@ -19,6 +19,6 @@ interface ImageDao {
     suspend fun clearAll()
 
     @Query("SELECT * FROM image_table")
-    suspend fun getAll(): List<Image>
+    fun getAll(): PagingSource<Int, Image>
 
 }

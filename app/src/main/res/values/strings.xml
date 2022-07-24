@@ -12,4 +12,7 @@
     <string name="error_loading_images">There was an error loading the images,\nplease check your internet and try again</string>
     <string name="try_again">Try Again</string>
     <string name="retry">Retry</string>
+    <string name="text_see_details">Do you want to see the details?</string>
+    <string name="text_yes">Yes</string>
+    <string name="text_cancel">Cancel</string>
 </resources>
