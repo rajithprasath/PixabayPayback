@@ -35,7 +35,6 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="?actionBarSize"
             android:background="@drawable/backdrop_image_gradient"
             android:padding="10dp"
             app:layout_constraintBottom_toBottomOf="parent">
