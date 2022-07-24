@@ -12,6 +12,7 @@
     <dimen name="size_12">12dp</dimen>
     <dimen name="size_8">8dp</dimen>
     <dimen name="size_4">4dp</dimen>
+    <dimen name="size_3">4dp</dimen>
 
     <dimen name="corner">@dimen/size_8</dimen>
     <dimen name="activity_horizontal_margin">16dp</dimen>

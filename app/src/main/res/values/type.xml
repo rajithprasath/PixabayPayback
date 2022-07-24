@@ -3,6 +3,14 @@
 
     <!-- Customized typography for selected components-->
 
+    <!--Search -->
+    <style name="PixabayPayback.Search" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">15sp</item>
+
+    </style>
+
     <!--Title (Image Item - Name, ImageDetailFragment - Header)-->
     <style name="PixabayPayback.Title" parent="TextAppearance.MaterialComponents.Body1">
         <item name="fontFamily">@font/poppins_semibold</item>
@@ -35,10 +43,17 @@
     </style>
 
     <!--Headline 4 (Image - downloads count, likes count and comments count)-->
-    <style name="PixabayPaybackCoungText" parent="TextAppearance.MaterialComponents.Body1">
+    <style name="PixabayPaybackCountText" parent="TextAppearance.MaterialComponents.Body1">
         <item name="fontFamily">@font/poppins_bold</item>
         <item name="android:textSize">15sp</item>
         <item name="android:textColor">@color/assistiveColor</item>
+    </style>
+
+    <!-- TextInputLayout -->
+    <style name="PixabayPayback.TextField" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="hintTextColor">@color/primaryColor</item>
+        <item name="hintTextAppearance">@style/PixabayPayback.Search</item>
+        <item name="boxStrokeColor">@color/secondaryColor</item>
     </style>
 
 </resources>

@@ -7,5 +7,5 @@ import kotlinx.coroutines.flow.Flow
 
 interface SearchRepository {
     @ExperimentalPagingApi
-    fun searchImages(searchString: String): Flow<PagingData<Image>>
+    fun searchImages(query: String): Flow<PagingData<Image>>
 }

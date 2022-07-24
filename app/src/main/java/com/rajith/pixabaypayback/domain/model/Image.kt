@@ -1,10 +1,13 @@
 package com.rajith.pixabaypayback.domain.model
 
+import android.os.Parcelable
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
+import kotlinx.parcelize.Parcelize
 
 @Entity(tableName = "image_table")
+@Parcelize
 data class Image(
     @PrimaryKey(autoGenerate = true) val imageId: Int = 0,
     val comments: Int,
@@ -19,4 +22,4 @@ data class Image(
     val userId: Int,
     val views: Int,
     var searchString: String? = null
-)
+) : Parcelable

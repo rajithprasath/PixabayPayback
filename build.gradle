@@ -30,6 +30,7 @@ ext {
     ktxNavVersion = "2.5.0"
     activityKtxVersion = "1.5.0"
     extVersion = "2.2.0"
+    swipeVersion = "1.1.0"
 }
 
 task clean(type: Delete) {
