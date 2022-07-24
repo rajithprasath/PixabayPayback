@@ -1,5 +1,5 @@
 # PixabayPayback
-This is an app which use Pixabay api to search images 
+This is an app which use Pixabay api to search images. I built this app following MVVM, Clean and Single Activity Architecture
 
 
 # Project Architecture
@@ -26,6 +26,16 @@ This app contains three layers(data, domain , presentation)
 * Utils
     * This is where most extension functions and constants and some other utils functions exist.
 
+## Libraries
 
+Libraries used:
+    - Viewmodel
+    - Data Binding
+    - Room 
+    - Paging 3
+    - Retrofit
+    - Coroutines
+    - Hilt
+    - Glide
 
 
